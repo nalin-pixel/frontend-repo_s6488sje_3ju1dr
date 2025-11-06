@@ -8,6 +8,7 @@ const modes = [
     description: 'Guided, healthy habits with gentle nudges and content controls.',
     Icon: Shield,
     gradient: 'from-pink-500 via-fuchsia-500 to-purple-600',
+    url: 'https://enterprise-vamverse.vercel.app/',
   },
   {
     key: 'adult',
@@ -15,6 +16,7 @@ const modes = [
     description: 'Deep focus blocks, mindful breaks, and distraction insights.',
     Icon: User,
     gradient: 'from-cyan-500 via-blue-500 to-indigo-600',
+    url: 'https://adultt-vamverse.vercel.app/',
   },
   {
     key: 'enterprise',
@@ -22,6 +24,7 @@ const modes = [
     description: 'Team analytics, policy guardrails, and privacy-first reporting.',
     Icon: Building2,
     gradient: 'from-amber-500 via-orange-500 to-rose-600',
+    url: 'http://youth-vamverse.vercel.app',
   },
 ];
 
@@ -39,10 +42,10 @@ export default function Modes() {
           Choose Your Mode
         </motion.h2>
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {modes.map(({ key, title, description, Icon, gradient }, idx) => (
+          {modes.map(({ key, title, description, Icon, gradient, url }, idx) => (
             <motion.a
               key={key}
-              href={`/${key}`}
+              href={url}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
